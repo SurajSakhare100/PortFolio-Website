@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;0,700;1,200;1,400;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    /* background-image: linear-gradient(135deg,#a66e6e,#fcbaba); */
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+
+.home {
+    width: 99%;
+    height: 98vh;
+    margin: auto;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+}
+/* menu section */
+.menu {
+    width: 26.5%;
+    height: 89%;
+    border-radius: 10px;
+    margin-right: .5%;
+    display: flex;
+    flex-direction: column;
+}
+.menu .menu_panel{
+width: 100%;
+height: 16%;
+background-color: #1A1A1A;
+border-radius: 10px;
+display: flex;
+} 
+.menu .menu_panel ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+.menu .menu_panel ul li{
+    display: flex;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+    padding-left: 5%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.menu .menu_panel ul li span{
+        font-size: 22px;
+        padding-right: 5%;
+        color: white;
+        cursor: pointer;
+}
+.menu .menu_panel ul li p{
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+}
+    .menu .menu_panel ul li:hover{
+        background-color: #2a2a2a4c;
+}
+.menu .menu-side-playlist{
+    width: 100%;
+    height: 84%;
+    overflow: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #1A1A1A;
+    border-radius: 10px;
+    padding: 1% 1%;
+    margin-top: 1%;
+    color: white;
+}
+.menu .menu-side-playlist nav{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+}
+.menu .menu-side-playlist nav ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 5%;
+}
+.menu .menu-side-playlist nav ul li{
+   list-style-type: none;
+   padding-left: 5%;
+   cursor: pointer;
+}
+ .menu .menu-side-playlist nav ul li:nth-child(3){
+    list-style-type: none;
+    margin-left: 30%;
+ }
+ .menu .menu-side-playlist nav ul li p{
+    width: 100%;
+    font-size: 16px;
+}
+ .menu .menu-side-playlist nav ul li .bi{
+    padding-left: 10%;
+    font-size: 22px;
+}
+
+.menu .menu-side-playlist .menu-side-playlist-btn{
+    margin: 5% 5%;
+}
+.menu .menu-side-playlist .menu-side-playlist-btn button{
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 2%;
+    color: white;
+    background-color: rgb(82, 82, 82);
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+    width: 70px;
+}
+.menu .menu-side-playlist .search .searchbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5%;
+    height: 10%;
+    width: 95%;
+    position: relative;
+    
+}
+.menu .menu-side-playlist .search{
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu .menu-side-playlist .search .searchbar span{
+    display: flex;
+    font-size: 18px;
+    padding-left: 3%;
+    cursor: pointer;
+}
+.menu .menu-side-playlist .search .searchbar span p{
+   font-size: 14px;
+   cursor: pointer;
+}
+.menu .menu-side-playlist .search .searchbar-list{
+    width: 100%;
+    height: 100%;
+   
+}
+.menu .menu-side-playlist .search::-webkit-scrollbar{
+    display: none;
+}
+.menu .menu-side-playlist .searchbar-list ul{
+    display: flex;
+    align-items: start;
+    padding-left: 5%;
+    margin-top: 3%;
+    width: 100%;
+    flex-direction: column;
+}
+ .menu .menu-side-playlist .search .searchbar-list ul li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 3%;
+    cursor: pointer;
+    width: 100%;
+}
+.menu .menu-side-playlist .search .searchbar-list ul li:hover{
+    background-color: #2a2a2a4c;
+}
+ .menu .menu-side-playlist .search .searchbar-list ul li .songimg img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+ .menu .menu-side-playlist .search .searchbar-list ul li .describe{
+    width: 100%;
+    margin-left: 5%;
+}
+ .menu .menu-side-playlist .search.searchbar-list ul li .describe p{
+    font-size: 14px;
+}
+

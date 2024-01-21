@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    background-color: #f8f6f3;
+}
+.about-content{
+    width: 100%;
+    height: auto;
+}
+.about-content .about-heading{
+    width: 100%;
+    height: auto;
+    padding: 2% 0;
+    position: relative;
+    background-color: #f8f6f3;
+}
+.about-content .about-heading h3{
+    font-size: 3.5rem;
+}
+.about-content .about-heading .leafbox{
+    width: 100%;
+    position: relative;
+    margin: 0;
+    height: auto;
+    padding-top: 3%;
+}
+.about-content .about-heading .leafbox .leaf{
+  top: 100%;
+  width: 10%;
+}
+
+.about-content .story{
+    width: 100%;
+    height: auto;
+    padding: 10%;
+    color: black;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+.about-content .story .text h4{
+    font-size: 2.3rem;
+    margin-bottom: 3%;
+}
+.about-content .story .text p{
+    font-size: 1rem;
+    padding-right: 10%;
+}
+
+.about-content .blackcard-score{
+    width: 100%;
+    height: auto;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding:1.5% 10%;
+}
+.about-content .blackcard-score .score{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about-content .blackcard-score .score h2{
+font-size: 3rem;
+}
+.about-content .blackcard-score .score h5{
+font-size: 1.3rem;
+font-weight: 400;
+}
+.about-content .blackcard-score h3{
+font-size: 1.4rem;
+text-align: left;
+}
+.about-content .certifiaction-page{
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 5% 10%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+.about-content .certifiaction-page .cetify-review{
+    background-color: #f8f6f3;
+    padding: 2%;
+    width: 60%;
+    height: 100%;
+}
+.about-content .certifiaction-page .cetify-review li{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.about-content .certifiaction-page .cetify-review h5{
+    padding-right: 10%;
+}
+.about-content .certifiaction-page .cetify-review li .banner{
+    width: 90%;
+}
+.about-content .certifiaction-page .cetify-review li .banner img{
+width: 100%;
+border-radius: 5px;
+}
+.about-content .certifiaction-page .cetify-review li .profile{
+    display: flex;
+    gap: 15px;
+}
+ .certifiaction-page .cetify-products{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 10%;
+}
+ .certifiaction-page .cetify-products .certify-logo {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+ .certifiaction-page .cetify-products .certify-logo img{
+    width: 30%;
+}
+
+ .certifiaction-page .cetify-products .certify-logo .text{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.about-content .certifiaction-page .cetify-products .certify-logo .text h5{
+    font-size: 1.6rem
+};
+.about-content .certifiaction-page .cetify-products .certify-logo .text p{
+    font-size: 1.1rem
+};
+.about-content .certifiaction-page .cetify-products h5{
+    font-size: 4rem;
+}
+.about-content .certifiaction-page .cetify-products .check-points{
+    display: flex; 
+    gap: 30px;
+}
+/* .about-content .certifiaction-page .cetify-products .check-points ul{
+   padding-right: 20%; 
+} */
+.about-content .certifiaction-page .cetify-products .check-points ul li{
+list-style-type: none;
+margin-bottom: 10%;
+}
+.btn-box button{
+    outline: none;
+    border: none;
+    padding: 3% 5%;
+    background-color: #6A9739;
+    color: white;
+    border-radius: 5px;
+    font-weight: 600;
+}
+@media screen and (max-width:800px) {
+    .about-content .certifiaction-page{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .about-content .story{
+        display: flex;flex-wrap: wrap;
+        width: 100%;
+    }
+    .about-content .story .img{
+        width: 100%;
+    }
+    .about-content .story .img img{
+        width: 100%;
+    }
+    .about-content .blackcard-score{
+        display: flex;flex-wrap: wrap;flex-direction: column;
+        padding: 10% 0;
+    }
+    .about-content .certifiaction-page {
+        gap: 60px;
+    }
+    .about-content .certifiaction-page .cetify-review{
+        width: 100%;
+    }
+    .about-content .certifiaction-page .cetify-products {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        width: 100%;
+text-align: center;
+    }
+    .about-content .certifiaction-page .cetify-products h5{
+        font-size: 3rem;
+    }
+    .about-content .certifiaction-page .cetify-products .certify-logo{
+        display: flex;
+        flex-direction: column;
+    }
+    .about-content .certifiaction-page .cetify-products .certify-logo img{
+        width: 50%;
+    }
+    .about-content .certifiaction-page .cetify-products .certify-logo .text h5{
+        font-size: 1.2rem
+    };
+    .about-content .certifiaction-page .cetify-products .certify-logo .text p{
+        font-size: .5rem
+    };
+    .about-content .certifiaction-page .cetify-products .check-points{
+        display: flex; 
+        gap: 0px;
+    }
+    .about-content .certifiaction-page .cetify-products .check-points ul{
+        width: 50%;
+    }
+    .about-content .certifiaction-page .cetify-products .check-points ul li{
+        list-style-type: none;
+        margin-bottom: 10%;
+        font-size: 1rem;
+        text-align: left;
+        }
+        .about-content .blackcard-score h3{
+            font-size: 1.2rem;
+            text-align: center;
+            }
+.about-content .blackcard-score .score {
+                width: 100%;
+            }
+            .about-content .blackcard-score .score h2 {
+                font-size: 2rem;
+            }
+            .about-content .story .text h4 {
+                font-size: 1.2rem;
+            }
+            .about-content .story .text p {
+                font-size: 1rem;
+                padding-right: 0%;
+            }
+            .btn-box button{
+                width: 100%;
+                font-size: .9rem;
+            }
+        }
