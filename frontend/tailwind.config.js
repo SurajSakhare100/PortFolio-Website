@@ -21,7 +21,23 @@ export default {
           'sans-serif'
         ],
       },
+      backgroundImage: {
+        'gradient-text': 'linear-gradient(45deg, #7D27FF, #d9a7c7)',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities(
+        {
+          '.bg-clip-text': {
+            'background-clip': 'text',
+            '-webkit-background-clip': 'text',
+            color: 'transparent',
+          },
+        },
+        ['responsive', 'hover']
+      );
+    },
+  ],
 }
