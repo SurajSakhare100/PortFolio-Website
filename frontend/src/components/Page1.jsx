@@ -2,56 +2,57 @@ import React from 'react'
 import gsap from 'gsap';
 import { useEffect, useRef } from 'react';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 function Page1() {
-  gsap.registerPlugin(ScrollTrigger);
-  const text1 = "Namste(); I'm";
-  const text2 = "Suraj Sakhare";
-  const text3 = "I Love to Code.";
-  useEffect(() => {
-    gsap.to('.h1', {
-      color: '#60a5fa',
-      duration: 2,
-      yoyo: true,
-      repeat: -1,
-      stagger: 0.5,
-      ease: 'power1.inOut',
-    });
-  }, []);
+    gsap.registerPlugin(ScrollTrigger);
+    const text1 = "Namste(); I'm";
+    const text2 = "Suraj Sakhare";
+    const text3 = "I Love to Code.";
+    useGSAP(() => {
+        gsap.to('.h1', {
+            color: '#60a5fa',
+            duration: 2,
+            yoyo: true,
+            repeat: -1,
+            stagger: 0.5,
+            ease: 'power1.inOut',
+        });
+    }, []);
     const bounceChar = (e) => {
         const tl = gsap.timeline();
         const element = e.target;
-    
+
         if (!element.dataset.originalColor) {
-          element.dataset.originalColor = window.getComputedStyle(element).color;
+            element.dataset.originalColor = window.getComputedStyle(element).color;
         }
-    
+
         tl.to(element, {
-          scaleX: 0.8,
-          scaleY: 1.2,
-          duration: 0.2,
-          ease: 'bounce.out',
-          color: 'aqua',
-        })
-          .to(element, {
-            scaleX: 1.2,
-            scaleY: 0.8,
-            duration: 0.3,
-            ease: 'power1.out',
-            color: element.dataset.originalColor,
-          })
-          .to(element, {
-            scaleX: 1,
-            scaleY: 0.9,
-            duration: 0.2,
-            ease: 'power1.out',
-          })
-          .to(element, {
-            scaleX: 1,
-            scaleY: 1,
+            scaleX: 0.8,
+            scaleY: 1.2,
             duration: 0.2,
             ease: 'bounce.out',
-          });
-      };
+            color: 'aqua',
+        })
+            .to(element, {
+                scaleX: 1.2,
+                scaleY: 0.8,
+                duration: 0.3,
+                ease: 'power1.out',
+                color: element.dataset.originalColor,
+            })
+            .to(element, {
+                scaleX: 1,
+                scaleY: 0.9,
+                duration: 0.2,
+                ease: 'power1.out',
+            })
+            .to(element, {
+                scaleX: 1,
+                scaleY: 1,
+                duration: 0.2,
+                ease: 'bounce.out',
+            });
+    };
     return (
         <div className="page1 w-1/2 mx-auto h-screen flex flex-col gap-4 items-start justify-center">
             <h1 className="font-bold font-whitney text-3xl tracking-normal cursor-pointer">
