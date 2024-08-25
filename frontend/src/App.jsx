@@ -1,102 +1,63 @@
-import gsap from 'gsap';
-import { useEffect, useRef } from 'react';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-import './index.css'; 
-import Page2 from './components/Page2';
-import Page1 from './components/Page1';
+import React, { useEffect, useRef } from 'react';
 import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Skills from './pages/Skills';
+import Projects from './pages/Projects';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import gsap from 'gsap';
+import CustomCursor from './components/CustomCursor';
+import AnimatedImage from './components/AnimatedImage';
 
 function App() {
-  gsap.registerPlugin(ScrollTrigger);
-
-  const cursor = useRef(null);
-  const point = useRef(null);
+  const voiletcircleRef = useRef(null);
+  const bluecircleRef = useRef(null);
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
-      requestAnimationFrame(() => {
-        gsap.to(cursor.current, {
-          x: e.clientX,
-          y: e.clientY,
-          duration: 0.5,
-          ease: 'power2.out',
-        });
-        gsap.to(point.current, {
-          x: e.clientX,
-          y: e.clientY,
-          duration: 0,
-          ease: 'power2.out',
-        });
-      });
-    };
+    const tl = gsap.timeline({ repeat: -1, yoyo: true });
 
-    const handleMouseDown = () => {
-      gsap.to(cursor.current, {
-        scale: 0.8,
-        duration: 0.2,
-        ease: 'power2.out',
-      });
-    };
-
-    const handleMouseUp = () => {
-      gsap.to(cursor.current, {
+    tl.to(voiletcircleRef.current, {
+      scale: 1.5,
+      duration: 2,
+      ease: 'power1.inOut',
+    })
+      .to(voiletcircleRef.current, {
         scale: 1,
-        duration: 0.2,
-        ease: 'power2.out',
+        duration: 2,
+        ease: 'power1.inOut',
       });
-    };
-
-    const handleMouseEnterImage = () => {
-      gsap.to(cursor.current, {
-        scale: 1.5,
-        duration: 0.3,
-        ease: 'power2.out',
-      });
-    };
-
-    const handleMouseLeaveImage = () => {
-      gsap.to(cursor.current, {
-        scale: 1,
-        duration: 0.3,
-        ease: 'power2.out',
-      });
-    };
-
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mousedown', handleMouseDown);
-    document.addEventListener('mouseup', handleMouseUp);
-
-    const images = document.querySelectorAll('img');
-    images.forEach((image) => {
-      image.addEventListener('mouseenter', handleMouseEnterImage);
-      image.addEventListener('mouseleave', handleMouseLeaveImage);
-    });
-
-    return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mousedown', handleMouseDown);
-      document.removeEventListener('mouseup', handleMouseUp);
-
-      images.forEach((image) => {
-        image.removeEventListener('mouseenter', handleMouseEnterImage);
-        image.removeEventListener('mouseleave', handleMouseLeaveImage);
-      });
-    };
   }, []);
+  useEffect(() => {
+    const tl = gsap.timeline({ repeat: -1, yoyo: true });
 
+    tl.to(bluecircleRef.current, {
+      scale: 1.5,
+      duration: 2,
+      ease: 'power1.inOut',
+    })
+      .to(bluecircleRef.current, {
+        scale: 1,
+        duration: 2,
+        ease: 'power1.inOut',
+      });
+  }, []);
   return (
-    <div className="w-full h-full bg-[#11111b] font-whitney relative">
-      <Navbar/>
-      <div
-        ref={cursor}
-        className="top-0 fixed z-10 w-10 h-10 rounded-full border-2 border-white transform -translate-x-1/2 -translate-y-1/2 "
-      ></div>
-      <div
-        ref={point}
-        className="fixed top-0 z-10 w-2 h-2 rounded-full bg-blue-400 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-      ></div>
-      <Page1 />
-      <Page2 />
+    <div className='w-full bg-[rgb(17,17,27)] text-white relative overflow-hidden'>
+       <AnimatedImage
+                imageSrc="/src/assets/boy.jpg"
+                eyeSrc="path/to/your/eye-image.png"
+            />
+      <CustomCursor />
+      <div ref={voiletcircleRef} className="hidden md:block absolute top-48 -right-[10%] w-96 h-96 bg-violet-500 rounded-full blur-3xl  opacity-50 z-0"></div>
+
+      <div ref={bluecircleRef} className="hidden md:block absolute top-[10%] -left-[15%] w-96 h-96 bg-blue-500 rounded-full blur-3xl  opacity-50 z-0"></div>
+
+      <Navbar />
+      <Home />
+      <Skills />
+      <About />
+      <Projects />
+      <Contact />
     </div>
   );
 }

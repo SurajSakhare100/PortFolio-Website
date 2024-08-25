@@ -1,19 +1,32 @@
-import React from 'react'
+// src/components/Navbar.js
+import React from 'react';
 
-function Navbar() {
+const Navbar = () => {
     return (
-        <div className='w-full h-20 sticky top-0 z-[999] pt-5'>
-            <div className='h-20 w-4/5 mx-auto rounded-[50px] px-10 backdrop-blur-sm bg-gradient-to-br from-[#1a1a29] to-[#1b1b28a1] flex justify-between items-center'>
-                <div className='text-white font-baloo'>NAV logo</div>
-                <ul className='flex gap-4 items-center w-1/2 justify-around text-xl text-white'>
-                    <li className='nav-li cursor-pointer'>🏠<span className='nav-text'>Home</span></li>
-                    <li className='nav-li cursor-pointer'>🫠<span className='nav-text'>About</span></li>
-                    <li className='nav-li cursor-pointer'>🏋️‍♂️<span className='nav-text'>Work</span></li>
-                    <li className='nav-li cursor-pointer'>📞<span className='nav-text'>Contact</span></li>
-                </ul>
+        <nav className="w-full text-white">
+            <div className='w-full '>
+                <div className='flex justify-center '>
+                    <ul className="fixed top-4 w-3/4 mx-auto px-20  flex justify-between space-x-8 py-6 border-opacity-10 border border-gray-100 border-whit bg-gradient-to-br from-[rgb(35,35,49)] via-transparent to-transparent z-10  bg-opacity-80 backdrop-blur-lg rounded-3xl shadow-xl shadow-inherit">
+                        <li>
+                            <a href="#home" className="text-lg font-semibold hover:underline">&lt;/Home&gt;</a>
+                        </li>
+                        <li>
+                            <a href="#skills" className="text-lg font-semibold hover:underline">&lt;/Skills&gt;</a>
+                        </li>
+                        <li>
+                            <a href="#projects" className="text-lg font-semibold hover:underline">&lt;/Projects&gt;</a>
+                        </li>
+                        <li>
+                            <a href="#about" className="text-lg font-semibold hover:underline">&lt;/About&gt;</a>
+                        </li>
+                        <li>
+                            <a href="#contact" className="text-lg font-semibold hover:underline">&lt;/Contact&gt;</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    )
+        </nav>
+    );
 }
 
-export default Navbar
+export default Navbar;
