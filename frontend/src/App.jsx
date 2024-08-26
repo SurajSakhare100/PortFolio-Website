@@ -8,6 +8,7 @@ import Contact from './pages/Contact';
 import gsap from 'gsap';
 import CustomCursor from './components/CustomCursor';
 import AnimatedImage from './components/AnimatedImage';
+import ThreeScene from './components/RotatingCube';
 
 function App() {
   const voiletcircleRef = useRef(null);
@@ -43,10 +44,7 @@ function App() {
   }, []);
   return (
     <div className='w-full bg-[rgb(17,17,27)] text-white relative overflow-hidden'>
-       <AnimatedImage
-                imageSrc="/src/assets/boy.jpg"
-                eyeSrc="path/to/your/eye-image.png"
-            />
+       
       <CustomCursor />
       <div ref={voiletcircleRef} className="hidden md:block absolute top-48 -right-[10%] w-96 h-96 bg-violet-500 rounded-full blur-3xl  opacity-50 z-0"></div>
 
