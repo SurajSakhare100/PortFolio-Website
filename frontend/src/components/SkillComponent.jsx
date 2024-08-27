@@ -8,7 +8,7 @@ function SkillComponent() {
 
   const handleMouseOver = (e) => {
     gsap.to(e.currentTarget, {
-      scale: 1.09,
+      scale: 1.1,
       duration: 1,
     });
     gsap.to(tooltip.current, {
