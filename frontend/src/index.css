@@ -4,4 +4,32 @@
 html {
     scroll-behavior: smooth;
   }
-  
+  .glassy-li {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for glassy effect */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.glassy-li:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Darken the background on hover */
+    transform: translateY(-3px); /* Lift the element slightly */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+@media (min-width: 640px) {
+  .glassy-li {
+    background-color: transparent; /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border: none; /* Light border for glassy effect */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+.glassy-li:hover {
+  background-color: transparent; /* Darken the background on hover */
+  transform: translateY(-3px); /* Lift the element slightly */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+}
