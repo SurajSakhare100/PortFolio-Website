@@ -1,35 +1,34 @@
-import React from 'react';
-import profile from '../assets/profile.jpg'; // Ensure correct path
+import React, { useRef } from 'react';
 import Headers from '../components/Headers';
 import Image from '../components/Image';
+import myProfile from '../../public/surajprofile.jpg'; // Ensure correct path
 
 const AboutSection = () => {
     // Function to open the resume URL
-    const openURL = () => {
-        window.open('URL_TO_YOUR_RESUME', '_blank');
-    };
+  const aboutRef = useRef(null);
+
+    
 
     return (
-        <section className="w-2/3 mx-auto ">
-            <div className="p-6">
-               <Headers  headers={'About'}/>
-
-                <div className="w-full flex flex-col sm:flex-row items-center justify-between md:pb-10">
-                    <div className="about-info mb-6 sm:mb-0 sm:mr-6 flex-1 text-lg tracking-normal">
+        <section id="about" className="w-full px-10 md:px-0 md:w-2/3 mx-auto py-2" ref={aboutRef}>
+            <div className="">
+                <Headers headers={'About'} triggerElement={aboutRef.current}  />
+                <div className=" md:mt-10 flex flex-col-reverse gap-4 lg:flex-row items-center lg:justify-between md:pb-10">
+                    <div className="about-info mb-6 sm:mb-0 sm:mr-6 flex-1 text-base sm:text-lg tracking-normal">
                         <p className='mb-2'>
-                            Hi! My name is Vinod. I'm a web developer and digital visual artist. I love creating things that exist on the internet. My interest in web development started in 2021 when I decided to upload my digital concept arts online.
+                        Hello! I'm Suraj Sakhare, a passionate MERN stack developer with a strong focus on creating dynamic and responsive web applications. I specialize in using MongoDB, Express.js, React, and Node.js to build efficient and scalable solutions that enhance user experiences.
                         </p>
                         <p className='mb-2'>
-                            Instead of creating an online Concepts Art website, I started enjoying web development. Creating custom things for the web taught me a lot about design &amp; development!
-                        </p>
+                        With a keen interest in full-stack development, I enjoy working on projects that challenge my skills and push the boundaries of what’s possible. I am always eager to learn new technologies and stay updated with industry trends.  </p>
                         <p className='mb-2'>
                             My main focus these days is building interesting &amp; creative web designs. I like to code things from scratch and enjoy bringing ideas to life in the browser.
                         </p>
                         {/* Resume button */}
-                        <button
-                            className="resume-btn mt-6 flex items-center bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-300"
+                        <a
+                            className="w-40 cursor-pointer btn mt-6 flex items-center justify-center bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-300"
                             id="resume-btn"
-                            onClick={openURL}
+                            target="_blank"
+                            href='https://drive.google.com/file/d/14g8ImsEA6PiQa7mgwK0zJ7w2YXyTKPLr/view?usp=sharing'
                         >
                             <div className="sign mr-2">
                                 <svg viewBox="0 0 640 512" className="w-6 h-6 fill-current">
@@ -37,11 +36,11 @@ const AboutSection = () => {
                                 </svg>
                             </div>
                             <div className="text">Resume</div>
-                        </button>
+                        </a>
                     </div>
 
-                    <div className="w-80 h-full">
-                        <Image src={profile}/>
+                    <div className="w-64 h-full sm:w-80 md:w-96">
+                        <Image src={myProfile} />
                     </div>
                 </div>
             </div>

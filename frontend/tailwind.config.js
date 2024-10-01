@@ -28,6 +28,10 @@ export default {
         'circle': 'circle(0% at center center)',
         'full': 'circle(100% at center center)',
       },
+      perspective: {
+        500: '500px',
+      },
+
 
     },
     plugins: [],

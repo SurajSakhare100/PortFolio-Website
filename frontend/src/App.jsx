@@ -7,8 +7,6 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import gsap from 'gsap';
 import CustomCursor from './components/CustomCursor';
-import AnimatedImage from './components/AnimatedImage';
-import ThreeScene from './components/RotatingCube';
 
 function App() {
   const voiletcircleRef = useRef(null);

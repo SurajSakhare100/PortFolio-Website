@@ -33,10 +33,10 @@ function Headers({ headers, triggerElement }) {
 
     return (
         <div className="flex items-center mb-6 mt-10" ref={headerRef}>
-            <h2 className="text-3xl font-medium tracking-widest">
+            <h2 className="text-2xl md:text-3xl text-nowrap font-medium tracking-widest">
                 &lt;/{headers}&gt;
             </h2>
-            <p className="w-80 ml-2 mt-2 bg-white h-[1px]"></p>
+            <p className="w-72 md:w-80 ml-2 mt-2 bg-white h-[1px]"></p>
         </div>
     );
 }

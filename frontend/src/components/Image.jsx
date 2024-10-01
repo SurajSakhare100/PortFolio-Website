@@ -6,7 +6,7 @@ function Image({src}) {
       <img
         src={src}
         alt="Hover Me"
-        className="clip-path-circle hover:clip-path-full transition-all duration-400 ease-in-out"
+        className="clip-path-circle hover:clip-path-full transition-all duration-400 ease-in-out rounded-xl"
       />
     </div>
   )

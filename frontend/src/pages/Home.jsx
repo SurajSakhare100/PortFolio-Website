@@ -1,10 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
-    const text1 = "Namste(); I'm";
+    const text1 = "Namaste(); I'm";
     const text2 = "Suraj Sakhare";
     const text3 = "I design & code for web";
 
@@ -55,14 +56,11 @@ const Home = () => {
             });
     };
 
-    
-
     return (
         <>
-            <div className=' w-full h-screen overflow-hidden relative'>
-                <div className="z-20 w-2/3 sm:px-20 pb-20 mx-auto flex h-full flex-col gap-2 items-start justify-end ">
-
-                    <h4 className="font-bold font-whitney text-4xl tracking-normal cursor-pointer select-none">
+            <div id="home"  className='w-full h-screen overflow-hidden relative'>
+                <div className="z-20 w-full sm:w-2/3 px-6 sm:px-20 pb-20 mx-auto flex h-full flex-col md:gap-4 items-start justify-center md:justify-end mt-20 sm:mt-0 sm:pb-20">
+                    <h4 className="font-bold font-whitney text-3xl sm:text-4xl tracking-normal cursor-pointer select-none mb-2">
                         {text1.split("").map((char, index) => (
                             <span
                                 key={index}
@@ -73,7 +71,7 @@ const Home = () => {
                             </span>
                         ))}
                     </h4>
-                    <h4 className="-mt-4 text-violet-400 h1 leading-snug font-bold font-whitney text-7xl tracking-tighter cursor-pointer select-none">
+                    <h4 className="-mt-4 text-violet-400 h1 leading-snug font-bold font-whitney text-5xl sm:text-7xl tracking-tighter cursor-pointer select-none">
                         {text2.split("").map((char, index) => (
                             <span
                                 key={index}
@@ -84,7 +82,7 @@ const Home = () => {
                             </span>
                         ))}
                     </h4>
-                    <h4 className="font-bold font-whitney text-white text-7xl tracking-tighter cursor-pointer select-none">
+                    <h4 className="font-bold font-whitney text-white text-5xl sm:text-7xl tracking-tighter cursor-pointer select-none">
                         {text3.split("").map((char, index) => (
                             <span
                                 key={index}
@@ -95,25 +93,19 @@ const Home = () => {
                             </span>
                         ))}
                     </h4>
-                    <div className='flex flex-col gap-4 text-lg font-semibold pr-40 mt-4'>
+                    <div className='flex flex-col gap-4 text-lg font-semibold pr-0 sm:pr-40 mt-4'>
                         <p className="text-white select-none">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quas
-                            ipsa dolorem minus. Cum voluptatibus enim amet quia eligendi rem.
-                        </p>
-                        <p className="text-white select-none">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quas
-                            ipsa dolorem minus. Cum voluptatibus enim amet quia eligendi rem.
+                        Enthusiastic MERN Stack Web Developer proficient in C++, Java, and JavaScript. I am eager to make a meaningful impact by delivering clean, efficient code and creating responsive web applications.
                         </p>
                     </div>
                     <div className="bg-[#7D27FF] rounded-lg opacity-0.8 mt-6">
-                        <button className="font-light -tracking-tighter inset-2 text-sm bg-[#A8C7F2] py-3 px-16 shadow-inner shadow-[#11111164] rounded-lg font-poppins transform -translate-x-1 -translate-y-1 delay-75 ease-in transition-all hover:-translate-x-2 hover:-translate-y-2">
+                        <button className="font-light -tracking-tighter inset-2 text-sm bg-[#A8C7F2] py-3 px-8 sm:px-16 shadow-inner shadow-[#11111164] rounded-lg font-poppins transform -translate-x-1 -translate-y-1 delay-75 ease-in transition-all hover:-translate-x-2 hover:-translate-y-2">
                             Let's Talk
                         </button>
                     </div>
                 </div>
-             
             </div>
-            </>
+        </>
     );
 };
 
