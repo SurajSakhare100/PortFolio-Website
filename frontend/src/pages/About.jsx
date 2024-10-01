@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import Headers from '../components/Headers';
 import Image from '../components/Image';
-import myProfile from '../../public/surajprofile.jpg'; // Ensure correct path
+import myProfile from '/surajprofile.jpg'; // Ensure correct path
 
 const AboutSection = () => {
     // Function to open the resume URL
