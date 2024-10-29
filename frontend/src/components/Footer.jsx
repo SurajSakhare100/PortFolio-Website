@@ -8,6 +8,9 @@ function Footer() {
           <div className='bg-black w-full h-20 absolute bottom-0 flex items-center justify-center'>
           © {new Date().getFullYear()} Suraj Sakhare. All rights reserved.
           </div>
+          <div>
+          <p>Also Visit to Dev Tool: <a href="https://toolfordev.vercel.app/" target="_blank">DevTool</a></p>
+          </div>
     </div>
   )
 }
