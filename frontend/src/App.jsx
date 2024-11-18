@@ -7,7 +7,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import gsap from 'gsap';
 import CustomCursor from './components/CustomCursor';
-
+import { Analytics } from "@vercel/analytics/react"
 function App() {
   const voiletcircleRef = useRef(null);
   const bluecircleRef = useRef(null);
@@ -54,6 +54,7 @@ function App() {
       <About />
       <Projects />
       <Contact />
+      <Analytics/>
     </div>
   );
 }
