@@ -47,7 +47,7 @@ function App() {
       <div ref={voiletcircleRef} className="hidden md:block absolute top-48 -right-[10%] w-96 h-96 bg-violet-500 rounded-full blur-3xl  opacity-50 z-0"></div>
 
       <div ref={bluecircleRef} className="hidden md:block absolute top-[10%] -left-[15%] w-96 h-96 bg-blue-500 rounded-full blur-3xl  opacity-50 z-0"></div>
-      <a href="https://www.buymeacoffee.com/sakharesurx" target="_blank" className='fixed left-4 top-[88%] z-50'><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" className='h-12 w-48' /></a>
+      <a href="https://buymeacoffee.com/sakharesuraj10" target="_blank" className='fixed left-4 top-[88%] z-50'><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" className='h-12 w-48' /></a>
       <Navbar />
       <Home />
       <Skills />
