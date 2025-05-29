@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../components/Footer';
-import { FaDiscord, FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaDiscord, FaEnvelope, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const Contact = () => {
   return (
@@ -42,12 +42,12 @@ const Contact = () => {
           </a>
 
           <a
-            href="https://discord.com/channels/@me"
+            href="https://x.com/surajsakhare100"
             target="_blank"
             rel="noopener noreferrer"
             className="w-12 h-12 flex relative overflow-hidden items-center justify-center rounded-full bg-white group transition-all duration-500 cursor-pointer"
           >
-            <FaDiscord className="fill-gray-900 relative text-3xl z-10 transition-all duration-300 group-hover:fill-white" />
+            <FaTwitter className="fill-gray-900 relative text-3xl z-10 transition-all duration-300 group-hover:fill-white" />
             <div className="absolute top-full left-0 w-full h-full rounded-full bg-yellow-500 z-0 transition-all duration-500 group-hover:top-0"></div>
           </a>
         </div>
