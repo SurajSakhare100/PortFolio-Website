@@ -51,7 +51,9 @@ const ProjectItem = ({ image, data }) => {
                         {data?.desc}
                     </span>
                     <div className="flex gap-4">
-                        <a
+                        {
+                        data?.gitlink &&
+                            <a
                             href={data.gitlink}
                             target="_blank" 
                             rel="noopener noreferrer"  // Added for security
@@ -59,6 +61,7 @@ const ProjectItem = ({ image, data }) => {
                         >
                             <FaGithub className="w-10 h-10" />
                         </a>
+                        }
                         <a
                             href={data.weblink}
                             target="_blank" 

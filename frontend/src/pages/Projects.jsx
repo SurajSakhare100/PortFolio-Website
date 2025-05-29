@@ -3,28 +3,27 @@ import React, { useRef } from 'react';
 import ProjectItem from '../components/ProjectItems';
 import Headers from '../components/Headers';
 import YoutubeIndia from '/webpages/youtubeindia.png'; // Ensure the correct path
-import SpotifyIndia from '/webpages/spotifyindia.png'; // Ensure the correct path
+import habitpulse from '/webpages/habitpulse.png'; // Ensure the correct path
 import OrganicStore from '/webpages/organicstore.png'; // Ensure the correct path
-import DevNet from '/webpages/devnet.png'; // Ensure the correct path
+import readspark from '/webpages/readspark.png'; // Ensure the correct path
 
 const data = {
-    devnet: {
-        name: "Dev Net",
-        desc: "Full-stack social media platform for developers...",
-        weblink: "https://itsdevnet.vercel.app/",
-        gitlink: "https://github.com/SurajSakhare100/Social-Media-App",
+    habitpulse: {
+        name: "Habit Pulse",
+        desc: "A habit tracking app to help users build good habits.",
+        weblink: "https://habitpulse.xyz/",
+    },
+    readspark: {
+        name: "Read Spark",
+        desc: "React web app for discovering and sharing articles...",
+        weblink: "https://readspark.vercel.app/",
+        gitlink: "https://github.com/SurajSakhare100/ReadSpark",
     },
     youtubeindia: {
-        name: "Youtube India",
-        desc: "React web app replicating YouTube's features...",
+        name: "YouTube India",
+        desc: "A clone of YouTube India with features like video playback, search, and user authentication.",
         weblink: "https://youtubeindia.vercel.app/",
-        gitlink: "https://github.com/SurajSakhare100/youtube-clone",
-    },
-    spotifyindia: {
-        name: "Spotify India",
-        desc: "React web app replicating Spotify's features...",
-        weblink: "https://spotifyindia.vercel.app/",
-        gitlink: "https://github.com/SurajSakhare100/SpotifyCloneApp",
+        gitlink: "https://github.com/SurajSakhare100/youtube-clone"
     },
     organicstore: {
         name: "Organic Store",
@@ -42,10 +41,10 @@ const Projects = () => {
             <div>
             <Headers headers={'Project'} triggerElement={projectref.current} />
                 <div className="flex flex-col gap-32 sm:mt-28">
-                    <ProjectItem image={DevNet} data={data.devnet} />
-                    <ProjectItem image={OrganicStore} data={data.organicstore} />
-                    <ProjectItem image={YoutubeIndia} data={data.youtubeindia} />
-                    <ProjectItem image={SpotifyIndia} data={data.spotifyindia} />
+                    <ProjectItem image={habitpulse} data={data?.habitpulse} />
+                    <ProjectItem image={readspark} data={data?.readspark} />
+                    <ProjectItem image={YoutubeIndia} data={data?.youtubeindia} />
+                    <ProjectItem image={OrganicStore} data={data?.organicstore} />
                 </div>
             </div>
         </section>
