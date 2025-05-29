@@ -5,30 +5,31 @@ import myProfile from '/surajprofile.jpg'; // Ensure correct path
 
 const AboutSection = () => {
     // Function to open the resume URL
-  const aboutRef = useRef(null);
+    const aboutRef = useRef(null);
 
-    
+
 
     return (
         <section id="about" className="w-full px-10 md:px-0 md:w-2/3 mx-auto py-2" ref={aboutRef}>
             <div className="">
-                <Headers headers={'About'} triggerElement={aboutRef.current}  />
+                <Headers headers={'About'} triggerElement={aboutRef.current} />
                 <div className=" md:mt-10 flex flex-col-reverse gap-4 lg:flex-row items-center lg:justify-between md:pb-10">
                     <div className="about-info mb-6 sm:mb-0 sm:mr-6 flex-1 text-base sm:text-lg tracking-normal">
                         <p className='mb-2'>
-                        Hello! I'm Suraj Sakhare, a passionate MERN stack developer with a strong focus on creating dynamic and responsive web applications. I specialize in using MongoDB, Express.js, React, and Node.js to build efficient and scalable solutions that enhance user experiences.
+                            Hi, I'm Suraj Sakhare - a passionate full-stack developer focused on building dynamic, responsive web apps. I work mainly with Next.js, Tailwind CSS,Razorpay and MongoDB  to create scalable, user-friendly solutions.
                         </p>
                         <p className='mb-2'>
-                        With a keen interest in full-stack development, I enjoy working on projects that challenge my skills and push the boundaries of what’s possible. I am always eager to learn new technologies and stay updated with industry trends.  </p>
-                        <p className='mb-2'>
-                            My main focus these days is building interesting &amp; creative web designs. I like to code things from scratch and enjoy bringing ideas to life in the browser.
+                            I love tackling full-stack challenges that push my skills and keep me learning. Staying up-to-date with tech trends is part of the fun for me.
                         </p>
-                        {/* Resume button */}
+                        <p className='mb-2'>
+                            Lately, I've been focused on building clean, creative web designs from scratch — bringing ideas to life right in the browser.
+                        </p>
+
                         <a
                             className="w-40 cursor-pointer btn mt-6 flex items-center justify-center bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-300"
                             id="resume-btn"
                             target="_blank"
-                            href='https://drive.google.com/file/d/14g8ImsEA6PiQa7mgwK0zJ7w2YXyTKPLr/view?usp=sharing'
+                            href='https://drive.google.com/file/d/14CAawTGkXS1bKHkOZhOsV6gp11Ifg10i/view?usp=sharing'
                         >
                             <div className="sign mr-2">
                                 <svg viewBox="0 0 640 512" className="w-6 h-6 fill-current">
