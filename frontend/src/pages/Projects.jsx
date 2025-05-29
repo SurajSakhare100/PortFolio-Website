@@ -15,7 +15,7 @@ const data = {
     },
     readspark: {
         name: "Read Spark",
-        desc: "React web app for discovering and sharing articles...",
+        desc: "Ai powered github readme generator",
         weblink: "https://readspark.vercel.app/",
         gitlink: "https://github.com/SurajSakhare100/ReadSpark",
     },
